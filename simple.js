@@ -1151,7 +1151,14 @@ define(function(require, exports, module) {
                 // CS50 IDE menu
                 "Cloud9/Open Your Keymap",
                 "Cloud9/Open Your Stylesheet",
-
+                "Cloud9/Open Your Project Settings",
+                "Cloud9/Open Your User Settings",
+                "Cloud9/Open Your Init Script",
+                "Cloud9/Reset Settings",
+                "Cloud9/About Cloud9",
+                "Cloud9/Preferences",
+                "Cloud9/Web Server",
+                
                 // File menu
                 "File/Revert to Saved",
                 "File/Revert All to Saved",
@@ -1491,7 +1498,7 @@ define(function(require, exports, module) {
         function updateMenuCaptions() {
             // map paths to captions
             var captions = {
-                "Cloud9": "CS50 IDE",
+                "Cloud9": "Cloud-IDE",
                 "Cloud9/Quit Cloud9": "Log Out",
                 "Goto": "Go",
                 "Goto/Goto Anything...": "Anything...",
@@ -1512,11 +1519,11 @@ define(function(require, exports, module) {
          * Sets and updates the title of the browser tab.
          */
         function updateTitle(tab) {
-            var title = "CS50 IDE";
+            var title = "MANIT Cloud-IDE";
 
             // append "Offline" to offline IDE title
-            if (!c9.hosted)
-                title += " Offline";
+            //if (!c9.hosted)
+            //    title += " Offline";
 
             // prepend tab title when should
             document.title = tab && settings.getBool("user/tabs/@title")
